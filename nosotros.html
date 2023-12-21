@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/index.css">
+    <meta name="description" content="Página web de tienda">
+    <meta name="keywords" content="tienda, informática, servicios, red">
+    <meta name="author" content="Andrés Samuel Podadera González">
+    <link rel="shortcut icon" href="./imagenes/logo.png">
+    <link rel="stylesheet" href="estilos/nosotros.css">
     <title>SoftNetwork Technology - Sobre nosotros</title>
 </head>
 
@@ -14,40 +18,210 @@
             <p>SoftNetwork Technology</p>
         </div>
         <div class="logo-empresa">
-            <img src="./imagenes/logo.png" alt="Logotipo de la empresa">
+            <img src="./imagenes/logo.png" alt="Logotipo de la empresa" aria-labelledby="empresa-nombre">
         </div>
         <div class="submenu-header">
             <div class="imagen-producto">
                 <p>Producto Destacado:</p>
-                <img src="./imagenes/producto_destacado.jpg" alt="Producto del Mes">
+                <img src="./imagenes/producto_destacado.jpg" alt="Producto del Mes" aria-labelledby="producto-mes">
             </div>
             <div class="botones">
-                <button class="boton-login">Inicio de Sesión</button>
-                <button class="boton-contacto">Contacto</button>
+                <button class="boton-login" aria-label="Inicio de Sesión">Inicio de Sesión</button>
+                <button class="boton-contacto" aria-label="Contacto">Contacto</button>
             </div>
         </div>
     </header>
     <!--Navegación-->
     <nav class="navbar">
-        <ul class="menu-horizontal">
-            <li><a href="#">Desarrollo Software</a>
-                <ul class="submenu">
-                    <li><a href="https://www.ujaen.es/" target="_blank">Desarrollo Web</a></li>
-                    <li><a href="https://www.juntadeandalucia.es/educacion/portals/web/ced" target="_blank">ERP</a></li>
-                    <li><a href="./nosotros.html" target="_blank">Sobre nosotros</a></li>
+        <ul role="menubar" class="menu-horizontal" aria-label="Menú de navegación">
+            <li role="menuitem" tabindex="1" accesskey="t" aria-label="Desarrollo Software">Desarrollo
+                Sof<span>t</span>ware &#x25BE;
+                <ul role="menu" class="submenu">
+                    <li tabindex="2"><a href="https://www.ujaen.es/" target="_blank"
+                            aria-labelledby="Desarrollo Web"><span accesskey="W">W</span>eb</a>
+                    </li>
+                    <li tabindex="3"><a href="https://www.juntadeandalucia.es/educacion/portals/web/ced" target="_blank"
+                            accesskey="P" aria-labelledby="ERP">ER<span>P</span></a></li>
+                    <li tabindex="4"><a href="./nosotros.html" target="_blank" accesskey="O"
+                            aria-labelledby="Sobre nosotros">S<span>o</span>bre
+                            nosotros</a></li>
                 </ul>
             </li>
-            <li><a href="https://www.educacionyfp.gob.es/portada.html" target="_blank">Consultoría</a></li>
-            <li><a href="https://todofp.es/inicio.html" target="_blank">Implantación y Administración de Redes</a></li>
-            <li><a href="https://www.ujaen.es/" target="_blank">Zona Privada</a></li>
+            <li role="none" tabindex="5"><a href="https://www.educacionyfp.gob.es/portada.html" target="_blank"
+                    accesskey="N" aria-labelledby="Consultoría">Co<span>n</span>sultoría</a></li>
+            <li role="none" tabindex="6"><a href="https://todofp.es/inicio.html" target="_blank" accesskey="I"
+                    aria-labelledby="Implantación y Administración de Redes"><span>I</span>mplantación y Administración
+                    de Redes</a></li>
+            <li role="none" tabindex="7"><a href="https://www.ujaen.es/" target="_blank" accesskey="Z"
+                    aria-labelledby="Zona privada"><span>Z</span>ona
+                    Privada</a></li>
         </ul>
     </nav>
     <main>
-        <section class="migas-de-pan">
+        <section class=" migas-de-pan">
             <!-- Migas de pan -->
-            <p>Estás en: <a href="index.html">Inicio</a> / <a href="nosotros.html">Sobre nosotros</a></p>
+            <p>Estás en: <a href="index.html">Inicio</a> /Desarrollo Software / Sobre nosotros</p>
         </section>
-        <p>Esto es sobre nosotros</p>
+        <section class="contenido">
+            <h1>Sobre nosotros</h1>
+            <section class="productos">
+                <h2>Productos</h2>
+                <section class="producto1">
+                    <h3>Desarrollo Web</h3>
+                    <p>El desarrollo web es el proceso de crear sitios web, incluyendo el diseño, la
+                        maquetación, la
+                        programación, la implementación de CMS, la creación de contenidos y el mantenimiento
+                        de un sitio
+                        web.</p>
+                    <ul>
+                        <li>Usamos HTML y CSS para crear páginas</li>
+                        <li>Basados en estándares del W3C</li>
+                        <li>Usamos JavaScript para crear páginas dinámicas</li>
+                    </ul>
+                    <img src="./imagenes/desarrollo.jpg" alt="Desarrollo Web" />
+                    <article class="comentario1">
+                        <h4>Comentarios</h4>
+                        <h5>Olga García</h5>
+                        <cite>El desarrollo web es el proceso de crear sitios web, incluyendo el diseño, la
+                            maquetación, la
+                            programación, la implementación de CMS, la creación de contenidos y el
+                            mantenimiento de un
+                            sitio web.</cite>
+                    </article>
+                    <article class="comentario2">
+                        <h5>John Kigner</h5>
+                        <cite lang="en">The web development process includes web design, web content development,
+                            client-side/server-side
+                            scripting and network security configuration, among other tasks.</cite>
+                    </article>
+                </section>
+                <section class="producto2">
+                    <h3>Implantación y Administración de redes</h3>
+                    <p>La implantación y administración de redes es el proceso de crear redes, tanto locales
+                        como de
+                        área extensa,distribuyendo los recursos de la red entre los distintos usuarios, y
+                        administrando
+                        dispositivos de red, servidores, etc.</p>
+                    <ul>
+                        <li>Usamos redes cableadas e inalámbricas</li>
+                        <li>Basadas en estándares del IEEE</li>
+                        <li>La seguridad es nuestra prioridad</li>
+                    </ul>
+                    <img src="./imagenes/redes.jpg" alt="Implantación y Administración de redes" />
+                    <article class="comentario1">
+                        <h4>Comentarios</h4>
+                        <h5>Jose Antonio Rueda</h5>
+                        <p>El servicio de implantación y administración de redes nos ha permitido mejorar la
+                            comunicación entre los distintos departamentos de la empresa.</p>
+                    </article>
+                    <article class="comentario2">
+                        <h5>Samantha Loyalty</h5>
+                        <cite lang="en">The networks are the best way to communicate with other people, and the
+                            implantation and
+                            administration of networks is the best way to manage them. Nice service</cite>
+                    </article>
+                </section>
+            </section>
+            <section class="tabla-informacion">
+                <h2>Información de productos y servicios</h2>
+                <table>
+                    <caption>Tabla de productos y servicios</caption>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th colspan="2">Desarrollo Software</th>
+                            <th colspan="2">Sistemas y Seguridad</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>Software ERP</th>
+                            <th>Desarrollo Web</th>
+                            <th>Instalación y mantenimiento de redes</th>
+                            <th>Seguridad informática</th>
+                            <th>Consultoría</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Clientes nacionales</td>
+                            <td>300</td>
+                            <td>200</td>
+                            <td>350</td>
+                            <td>410</td>
+                            <td>610</td>
+                        </tr>
+                        <tr>
+                            <td>Clientes internacionales</td>
+                            <td>560</td>
+                            <td>230</td>
+                            <td>290</td>
+                            <td>1200</td>
+                            <td>290</td>
+                        </tr>
+                        <tr>
+                            <td>Totales</td>
+                            <td>860</td>
+                            <td>430</td>
+                            <td>640</td>
+                            <td>1610</td>
+                            <td>900</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="herramientas-desarrollo">
+                <h2>Herramientas de desarrollo</h2>
+                <article class="herramienta1">
+                    <h3>Kotlin Multiplatform: Codifica una vez, ejecútalo en todos</h3>
+                    <p>Reutilice el código en Android, iOS, web, escritorio y servidor manteniendo el código
+                        nativo si
+                        es necesario.
+                    <p>
+                        <img src="./imagenes/KTM.jpg" alt="Kotlin Multiplatform" />
+                    <p>Autor: JetBrains</p>
+                    <p>Fecha de publicación: Oct-2023</p>
+                    <a href="https://www.jetbrains.com/kotlin-multiplatform/" target="_blank">Más
+                        información</a>
+                </article>
+                <article class="herramienta2">
+                    <h3>Best Tech Stack for Web App Development in 2023</h3>
+                    <p>Discover the latest trending technologies in web application development and find
+                        advice on what
+                        tech stack is better to choose for your business growth.
+                    <p>
+                        <img src="./imagenes/beststacks.png" alt="Best Stack Web Development" />
+                    <p>Autor: Vsevolod Ulyanovich</p>
+                    <p>Fecha de publicación: 21-Sep-2023</p>
+                    <a href="https://medium.com/fively/best-tech-stack-for-web-app-development-4e81beb4cc2d"
+                        target="_blank">Más información</a>
+                </article>
+            </section>
+            <section class="equipo-desarrollo">
+                <h2>Equipo de desarrollo</h2>
+                <article class="empleado1">
+                    <h3>Elisa Sánchez</h3>
+                    <p>Ha participado en Desarrollo Web, ERP y Consultoría</p>
+                    <p>Desarrolladora Web</p>
+                    <img src="./imagenes/empleado1.jpg" alt="empleada Elisa Sánchez" />
+                </article>
+                <article class="empleado2">
+                    <h3>Antonio López</h3>
+                    <p>Ha participado en Desarrollo Software, ERP y Implantación y administración de redes
+                    </p>
+                    <p>Ingeniero de Sistemas</p>
+                    <img src="./imagenes/empleado2.jpg" alt="empleado Antonio López" />
+                </article>
+                <article class="empleado3">
+                    <h3>Ángel Martínez</h3>
+                    <p>Ha participado en Desarrollo Software, Realidad Virtual y Consultoría</p>
+                    <p>Product Manager</p>
+                    <img src="./imagenes/empleado3.jpg" alt="empleado Ángel Martínez" />
+                </article>
+            </section>
+            <section class="formulario">
+                <h2>Formulario de contacto</h2>
+            </section>
+        </section>
     </main>
     <footer>
         <!--Zona de cookies-->
