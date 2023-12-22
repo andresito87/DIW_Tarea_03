@@ -206,7 +206,6 @@ main .tarjetas-productos {
 main .tarjetas-productos .producto1 {
     grid-area: zona1;
     justify-self: center;
-
 }
 
 main .tarjetas-productos .producto2 {

@@ -26,33 +26,33 @@
                 <img src="./imagenes/producto_destacado.jpg" alt="Producto del Mes" aria-labelledby="producto-mes">
             </div>
             <div class="botones">
-                <button class="boton-login" aria-label="Inicio de Sesión">Inicio de Sesión</button>
-                <button class="boton-contacto" aria-label="Contacto">Contacto</button>
+                <button class="boton-login" aria-label="Inicio de Sesión" tabindex="1">Inicio de Sesión</button>
+                <button class="boton-contacto" aria-label="Contacto" tabindex="2">Contacto</button>
             </div>
         </div>
     </header>
     <!--Navegación-->
     <nav class="navbar">
         <ul role="menubar" class="menu-horizontal" aria-label="Menú de navegación">
-            <li role="menuitem" tabindex="1" accesskey="t" aria-label="Desarrollo Software">Desarrollo
+            <li role="menuitem" tabindex="3" accesskey="t" aria-label="Desarrollo Software">Desarrollo
                 Sof<span>t</span>ware &#x25BE;
                 <ul role="menu" class="submenu">
-                    <li tabindex="2"><a href="https://www.ujaen.es/" target="_blank"
+                    <li tabindex="4"><a href="https://www.ujaen.es/" target="_blank"
                             aria-labelledby="Desarrollo Web"><span accesskey="W">W</span>eb</a>
                     </li>
-                    <li tabindex="3"><a href="https://www.juntadeandalucia.es/educacion/portals/web/ced" target="_blank"
+                    <li tabindex="5"><a href="https://www.juntadeandalucia.es/educacion/portals/web/ced" target="_blank"
                             accesskey="P" aria-labelledby="ERP">ER<span>P</span></a></li>
-                    <li tabindex="4"><a href="./nosotros.html" target="_blank" accesskey="O"
+                    <li tabindex="6"><a href="./nosotros.html" target="_blank" accesskey="O"
                             aria-labelledby="Sobre nosotros">S<span>o</span>bre
                             nosotros</a></li>
                 </ul>
             </li>
-            <li role="none" tabindex="5"><a href="https://www.educacionyfp.gob.es/portada.html" target="_blank"
+            <li role="none" tabindex="7"><a href="https://www.educacionyfp.gob.es/portada.html" target="_blank"
                     accesskey="N" aria-labelledby="Consultoría">Co<span>n</span>sultoría</a></li>
-            <li role="none" tabindex="6"><a href="https://todofp.es/inicio.html" target="_blank" accesskey="I"
+            <li role="none" tabindex="8"><a href="https://todofp.es/inicio.html" target="_blank" accesskey="I"
                     aria-labelledby="Implantación y Administración de Redes"><span>I</span>mplantación y Administración
                     de Redes</a></li>
-            <li role="none" tabindex="7"><a href="https://www.ujaen.es/" target="_blank" accesskey="Z"
+            <li role="none" tabindex="9"><a href="https://www.ujaen.es/" target="_blank" accesskey="Z"
                     aria-labelledby="Zona privada"><span>Z</span>ona
                     Privada</a></li>
         </ul>
@@ -60,12 +60,12 @@
     <main>
         <section class=" migas-de-pan">
             <!-- Migas de pan -->
-            <p>Estás en: <a href="index.html">Inicio</a> /Desarrollo Software / Sobre nosotros</p>
+            <p>Estás en: <a href="index.html" tabindex="10">Inicio</a> /Desarrollo Software / Sobre nosotros</p>
         </section>
+        <h1>Sobre nosotros</h1>
         <section class="contenido">
-            <h1>Sobre nosotros</h1>
+            <h2>Productos:</h2>
             <section class="productos">
-                <h2>Productos</h2>
                 <section class="producto1">
                     <h3>Desarrollo Web</h3>
                     <p>El desarrollo web es el proceso de crear sitios web, incluyendo el diseño, la
@@ -122,51 +122,64 @@
                     </article>
                 </section>
             </section>
-            <section class="tabla-informacion">
+            <section class="tabla-informacion" title="Tabla de informacion de productos y servicios">
                 <h2>Información de productos y servicios</h2>
                 <table>
-                    <caption>Tabla de productos y servicios</caption>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th colspan="2">Desarrollo Software</th>
-                            <th colspan="2">Sistemas y Seguridad</th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th>Software ERP</th>
-                            <th>Desarrollo Web</th>
-                            <th>Instalación y mantenimiento de redes</th>
-                            <th>Seguridad informática</th>
-                            <th>Consultoría</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Clientes nacionales</td>
-                            <td>300</td>
-                            <td>200</td>
-                            <td>350</td>
-                            <td>410</td>
-                            <td>610</td>
-                        </tr>
-                        <tr>
-                            <td>Clientes internacionales</td>
-                            <td>560</td>
-                            <td>230</td>
-                            <td>290</td>
-                            <td>1200</td>
-                            <td>290</td>
-                        </tr>
-                        <tr>
-                            <td>Totales</td>
-                            <td>860</td>
-                            <td>430</td>
-                            <td>640</td>
-                            <td>1610</td>
-                            <td>900</td>
-                        </tr>
-                    </tbody>
+                    <details tabindex="11">
+                        <summary>Información de la tabla</summary>
+                        <p>La tabla muestra información sobre los productos y servicios que ofrece la empresa
+                            SoftNetwork
+                            Technology en relación con el número clientes</p>
+                        <caption>Tabla de productos y servicios</caption>
+                        <col>
+                        <!-- Agrupamos las columnas relacionados con Desarrollo Software -->
+                        <colgroup span="2" class="desarrollo-software"></colgroup>
+                        <!-- Agrupamos las columnas relacionados con Sistemas y Seguridad -->
+                        <colgroup span="2" class="sistemas-seguridad"></colgroup>
+                        <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th id="desarrollo-softaware" scope="colgroup" colspan="2">Desarrollo Software</th>
+                                <th id="sistemas-seguridad" scope="colgroup" colspan="2">Sistemas y Seguridad</th>
+                            </tr>
+                            <tr>
+                                <th id="clientes" scope="col">Tipos de Clientes</th>
+                                <th id="erp" scope="col">Software ERP</th>
+                                <th id="web" scope="col">Desarrollo Web</th>
+                                <th id="redes" scope="col">Instalación y mantenimiento de redes</th>
+                                <th id="seguridad" scope="col">Seguridad informática</th>
+                                <th id="consultoria" scope="col">Consultoría</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Clientes nacionales</td>
+                                <td headers="clientes erp">300</td>
+                                <td headers="clientes web">200</td>
+                                <td headers="clientes redes">350</td>
+                                <td headers="clientes seguridad">410</td>
+                                <td headers="clientes consultoria">610</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Clientes internacionales</td>
+                                <td headers="clientes erp">560</td>
+                                <td headers="clientes web">230</td>
+                                <td headers="clientes redes">290</td>
+                                <td headers="clientes seguridad">1200</td>
+                                <td headers="clientes consultoria">290</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td scope="row">Totales</td>
+                                <td headers="clientes erp">860</td>
+                                <td headers="clientes web">430</td>
+                                <td headers="clientes redes">640</td>
+                                <td headers="clientes seguridad">1610</td>
+                                <td headers="clientes consultoria">900</td>
+                            </tr>
+                        </tfoot>
+
                 </table>
             </section>
             <section class="herramientas-desarrollo">
@@ -180,7 +193,7 @@
                         <img src="./imagenes/KTM.jpg" alt="Kotlin Multiplatform" />
                     <p>Autor: JetBrains</p>
                     <p>Fecha de publicación: Oct-2023</p>
-                    <a href="https://www.jetbrains.com/kotlin-multiplatform/" target="_blank">Más
+                    <a href="https://www.jetbrains.com/kotlin-multiplatform/" target="_blank" tabindex="12">Más
                         información</a>
                 </article>
                 <article class="herramienta2">
@@ -193,39 +206,108 @@
                     <p>Autor: Vsevolod Ulyanovich</p>
                     <p>Fecha de publicación: 21-Sep-2023</p>
                     <a href="https://medium.com/fively/best-tech-stack-for-web-app-development-4e81beb4cc2d"
-                        target="_blank">Más información</a>
+                        target="_blank" tabindex="13">Más información</a>
                 </article>
             </section>
             <section class="equipo-desarrollo">
                 <h2>Equipo de desarrollo</h2>
                 <article class="empleado1">
-                    <h3>Elisa Sánchez</h3>
-                    <p>Ha participado en Desarrollo Web, ERP y Consultoría</p>
-                    <p>Desarrolladora Web</p>
                     <img src="./imagenes/empleado1.jpg" alt="empleada Elisa Sánchez" />
+                    <h3>Elisa Sánchez</h3>
+                    <p>Desarrolladora Web</p>
+                    <p>Ha participado en Desarrollo Web, ERP y Consultoría</p>
                 </article>
                 <article class="empleado2">
+                    <img src="./imagenes/empleado2.jpg" alt="empleado Antonio López" />
                     <h3>Antonio López</h3>
+                    <p>Ingeniero de Sistemas</p>
                     <p>Ha participado en Desarrollo Software, ERP y Implantación y administración de redes
                     </p>
-                    <p>Ingeniero de Sistemas</p>
-                    <img src="./imagenes/empleado2.jpg" alt="empleado Antonio López" />
                 </article>
                 <article class="empleado3">
-                    <h3>Ángel Martínez</h3>
-                    <p>Ha participado en Desarrollo Software, Realidad Virtual y Consultoría</p>
-                    <p>Product Manager</p>
                     <img src="./imagenes/empleado3.jpg" alt="empleado Ángel Martínez" />
+                    <h3>Ángel Martínez</h3>
+                    <p>Product Manager</p>
+                    <p>Ha participado en Desarrollo Software, Realidad Virtual y Consultoría</p>
                 </article>
             </section>
-            <section class="formulario">
+            <section class="formulario"
+                title="Rellenar formulario para obtener más información sobre uno de nuestros productos">
                 <h2>Formulario de contacto</h2>
+                <form action="." autocomplete="on" validate>
+                    <!-- El atributo autocomplete, puede hacerse a nivel de campo. -->
+                    <fieldset>
+                        <legend>Información de contacto obligatoria</legend>
+                        <label for="nombre-apellidos">Nombre y Apellidos:</label>
+                        <input id="nombre-apellidos" type="text" name="nombre-apellidos" minlength="3" maxlength="40"
+                            placeholder="Nombre y Apellidos" pattern="[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+"
+                            title="Introduzca su nombre y apellidos con un máximo 40 caracteres" tabindex="14" required>
+                        <!-- mensaje que se muestra para los campos obligatorios, cuando es invalido se muestra y cuando es válido se oculta -->
+                        <span class="mensaje"> Inválido</span>
+                        <br>
+                        <br>
+                        <label for="correo">Correo Electrónico:</label>
+                        <input id="correo" type="email" name="correo" placeholder="ejemplo@correo.com"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Introduzca su correo electrónico"
+                            tabindex="15" required>
+                        <span class="mensaje"> Inválido</span>
+                        <br>
+                        <br>
+                        <label for="select-producto">Elija un producto o servicio:</label>
+                        <select id="select-producto" acceskey="h" tabindex="16">
+                            <optgroup label="Desarrollo">
+                                <option value="1">Software ERP</option>
+                                <option value="2" selected>Desarrollo Web</option>
+                            </optgroup>
+                            <optgroup label="Sistemas y seguridad">
+                                <option value="4">Instalación y mantenimiento de redes</option>
+                                <option value="5">Seguridad informática</option>
+                                <option value="6">Consultoría</option>
+                            </optgroup>
+                        </select>
+                        <br>
+                        <br>
+                        <label for="fecha">Fecha de la cita:</label>
+                        <input type="date" id="fecha" name="fecha" placeholder="día de la cita"
+                            title="Introduzca el día que desea la cita" tabindex="17" required>
+                        <br>
+                        <br>
+                        <label for="select-turno">Turno: (Obligatorio)</label>
+                        <select id="select-turno" acceskey="h" tabindex="18">
+                            <option value="1" selected>Mañana</option>
+                            <option value="2">Tarde</option>
+                        </select>
+                    </fieldset>
+                    <br>
+                    <br>
+                    <fieldset>
+                        <legend>Información adicional</legend>
+                        <label for="select-via-contacto">¿Como conoció nuestro producto?</label>
+                        <select id="select-via-contacto" acceskey="h" tabindex="19" multiple>
+                            <option value="1" selected>Aconsejado por terceros</option>
+                            <option value="2" selected>Redes Sociales</option>
+                            <option value="3" selected>Nuestra Web</option>
+                            <option value="4" selected>Otros</option>
+                        </select>
+                        <br>
+                        <br>
+                        <label for="observaciones">Observaciones:</label>
+                        <textarea id="observaciones" name="observaciones" rows="4" cols="50" placeholder="Observaciones"
+                            tabindex="20"></textarea>
+                        <br>
+                        <br>
+                    </fieldset>
+                    <div class="botones">
+                        <button class="boton enviar" type="submit" tabindex="21">Enviar</button>
+                        <button class="boton inicializar" type="reset" tabindex="22">Inicializar</button>
+                    </div>
+                </form>
             </section>
         </section>
     </main>
     <footer>
         <!--Zona de cookies-->
-        <div class="cookies">
+        <div class=" cookies">
             <form id="cookie-formulario">
                 <h3>Configuración de Cookies</h3>
                 <label><input type="checkbox" name="cookies-obligatorias" value="cookies-obligatorias">Cookies

@@ -27,6 +27,7 @@ body {
     background-color: var(--color-quintenario);
 }
 
+
 /*Header*/
 header {
     font-family: "Open Sans", sans-serif;
@@ -196,6 +197,40 @@ main img {
     border-radius: 0.5em;
 }
 
+main .contenido .productos {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+
+
+main .contenido .productos .producto1,
+main .contenido .productos .producto2 {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+
+
+
+main .contenido .tabla-informacion {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+
+
+*/
+
 /*Footer*/
 footer {
     font-family: "Open-Sans", sans-serif;
@@ -214,15 +249,9 @@ footer .cookies form {
     justify-content: space-between;
 }
 
-
 footer .cookies form label:hover {
     outline: 2px solid var(--color-secundario);
 }
-
-/*No se pide pero me parece interesante conocer el pseudoselector*/
-/* footer .cookies form label:has(input[type="checkbox"]:checked) {
-    outline: 2px solid var(--color-secundario);
-} */
 
 footer .opciones-footer {
     justify-content: space-between;
@@ -289,57 +318,6 @@ footer .iconos-RRSS img:hover {
         padding: 0;
         margin: 0;
         font-size: 0.8em;
-    }
-
-    /*Main*/
-    main .tarjetas-productos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /*Dejo de mostrar los productos a partir del 4*/
-    main .tarjetas-productos div:nth-child(n+4) {
-        display: none;
-    }
-
-    main .tarjetas-productos .producto1 {
-        width: 80%;
-    }
-
-    main .tabla-productos {
-        display: none;
-    }
-
-    main .comentarios-clientes {
-        display: none;
-    }
-
-    main .zona-contenidos-2 {
-        font-size: 0.8em;
-    }
-
-    main .zona-contenidos-2 h3 {
-        text-transform: lowercase;
-    }
-
-    main .zona-contenidos-2 .noticia {
-        column-count: 1;
-        font-size: 1em;
-    }
-
-    main .zona-contenidos-2 .noticia p::first-letter {
-        font-size: 1em;
-        /*quitar capitalize*/
-        text-transform: none;
-    }
-
-    main .zona-contenidos-2 .imagenes-noticia img:first-child {
-        display: none;
-    }
-
-    main .zona-contenidos-2 .imagenes-noticia img {
-        width: 90%;
     }
 
     /*Footer*/
