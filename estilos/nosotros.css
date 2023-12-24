@@ -22,9 +22,10 @@
 
 /*Estilos generales*/
 body {
-    margin: 0;
+    margin: 0 0.5em;
     padding: 0;
     background-color: var(--color-quintenario);
+    font-size: 1.1em;
 }
 
 
@@ -167,8 +168,6 @@ header .botones button:hover {
     cursor: pointer;
 }
 
-
-/*no se pide pero me parecio util para facilitar la navegacion*/
 nav ul li a:hover {
     color: var(--color-quintenario);
 }
@@ -197,6 +196,43 @@ main img {
     border-radius: 0.5em;
 }
 
+main h2 {
+    color: var(--color-secundario);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5em;
+    /*borde a las letras para que se lea mejor*/
+    text-shadow: 1px 1px 1px var(--color-primario);
+
+}
+
+main .contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+
+/*Servicios y Productos*/
+main .contenido .productos-servicios {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+
+main .contenido .productos {
+    margin-top: 0 !important;
+}
+
+main .contenido .productos h3 {
+    text-align: center;
+}
+
 main .contenido .productos {
     width: 90%;
     display: flex;
@@ -206,19 +242,25 @@ main .contenido .productos {
     margin: 2em;
 }
 
-
-main .contenido .productos .producto1,
-main .contenido .productos .producto2 {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2em;
+main .contenido .producto1 {
+    width: 40%;
 }
 
+main .contenido .producto2 {
+    width: 40%;
+}
 
+main .contenido .productos img {
+    width: 80%;
+    border-radius: 0.5em;
+    /*alinear al centro*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
+}
+
+/*Tabla de informacion de productos*/
 main .contenido .tabla-informacion {
     width: 90%;
     display: flex;
@@ -226,10 +268,214 @@ main .contenido .tabla-informacion {
     justify-content: space-between;
     align-items: center;
     margin: 2em;
+    padding-bottom: 3em;
+}
+
+main .contenido .tabla-informacion table {
+    width: 90%;
+    border-collapse: collapse;
+    border: 1px solid var(--color-primario);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+main .contenido .tabla-informacion caption {
+    font-size: 1.5em;
+    padding: 0.5em;
+    color: var(--color-primario);
+}
+
+main .contenido .tabla-informacion table thead {
+    background-color: var(--color-secundario);
+    color: var(--color-quintenario);
+}
+
+main .contenido .tabla-informacion details {
+    background-color: var(--color-secundario);
+    color: var(--color-quintenario);
+    font-weight: bold;
+    padding: 0.5em;
+    border: 1px solid var(--color-primario);
+    cursor: pointer;
+}
+
+main .contenido .tabla-informacion table thead th {
+    padding: 0.5em;
+    border: 1px solid var(--color-primario);
+}
+
+main .contenido .tabla-informacion table tbody tr td {
+    padding: 0.5em;
+    border: 1px solid var(--color-primario);
 }
 
 
-*/
+main .contenido .tabla-informacion table tfoot tr td {
+    padding: 0.5em;
+    border: 1px solid var(--color-primario);
+
+    background-color: var(--color-terciario);
+
+}
+
+/*Herramientas de desarrollo*/
+main .contenido .herramientas {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+
+main .contenido .herramientas article {
+    margin-top: 0 !important;
+}
+
+main .contenido .herramientas img {
+    width: 25em;
+    border-radius: 0.5em;
+    height: 20em;
+}
+
+main .contenido .herramientas-desarrollo .herramienta1 {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+    text-align: center;
+}
+
+main .contenido .herramientas-desarrollo .herramienta2 {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+    text-align: center;
+}
+
+/*Equipo de desarrollo*/
+main .contenido .equipo-desarrollo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+
+main .contenido .equipo-desarrollo .equipo {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1em;
+    text-align: center;
+}
+
+main .contenido .equipo-desarrollo .equipo article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .contenido .equipo-desarrollo .equipo p {
+    width: 80%;
+}
+
+/*Formulario*/
+main .contenido .formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+main .contenido .formulario .contenido-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1em;
+}
+
+main .contenido .formulario fieldset {
+    width: 100%;
+}
+
+main .contenido .formulario form fieldset input:invalid {
+    border: 1px solid red;
+    display: inline;
+}
+
+main .contenido .formulario form fieldset input:valid {
+    border: 1px solid green;
+}
+
+main .contenido .formulario form fieldset input:valid+.mensaje {
+    visibility: hidden;
+}
+
+main .contenido .formulario form fieldset textarea {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 1px solid var(--color-primario);
+    font-size: 1.2em;
+}
+
+main .contenido .formulario form fieldset select {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 1px solid var(--color-primario);
+    font-size: 1.2em;
+}
+
+main .contenido .formulario form fieldset input {
+    width: 50%;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 1px solid var(--color-primario);
+    font-size: 1.2em;
+}
+
+main .contenido .formulario .informacion-adicional {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+}
+
+main .contenido .formulario .botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+main .contenido .formulario .botones button {
+    background-color: var(--color-terciario);
+    border: 1px solid var(--color-terciario);
+    border-radius: 0.5em;
+    padding: 0.2em;
+    margin: 0.25em;
+    width: 10em;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+main .contenido .formulario .botones button:hover {
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-primario);
+}
 
 /*Footer*/
 footer {
