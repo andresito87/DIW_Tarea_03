@@ -168,12 +168,14 @@ header .botones button:hover {
     cursor: pointer;
 }
 
-nav ul li a:hover {
-    color: var(--color-quintenario);
+
+.navbar .submenu li:hover a span {
+    color: var(--color-primario);
+    cursor: pointer;
 }
 
 /*Migas de pan*/
-.migas-de-pan {
+main .migas-de-pan {
     padding: 0.8em 1em;
     border: 1px solid hsl(0deg 0% 90%);
     border-radius: 4px;
@@ -181,12 +183,12 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-.migas-de-pan a {
+main .migas-de-pan a {
     color: var(--color-primario);
     font-weight: bold;
 }
 
-.migas-de-pan a:hover {
+main .migas-de-pan a:hover {
     color: var(--color-secundario);
 }
 
@@ -300,7 +302,7 @@ main .contenido .tabla-informacion details {
 }
 
 main .contenido .tabla-informacion table thead th {
-    padding: 0.5em;
+    padding: 1em;
     border: 1px solid var(--color-primario);
 }
 
@@ -319,8 +321,15 @@ main .contenido .tabla-informacion table tfoot tr td {
 }
 
 /*Herramientas de desarrollo*/
+main .contenido .herramientas-desarrollo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 main .contenido .herramientas {
-    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -333,9 +342,9 @@ main .contenido .herramientas article {
 }
 
 main .contenido .herramientas img {
-    width: 25em;
+    width: 100%;
     border-radius: 0.5em;
-    height: 20em;
+    height: 15em;
 }
 
 main .contenido .herramientas-desarrollo .herramienta1 {
@@ -360,12 +369,11 @@ main .contenido .herramientas-desarrollo .herramienta2 {
 
 /*Equipo de desarrollo*/
 main .contenido .equipo-desarrollo {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 2em;
 }
 
 main .contenido .equipo-desarrollo .equipo {
@@ -373,19 +381,26 @@ main .contenido .equipo-desarrollo .equipo {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-    margin: 1em;
+    align-items: top;
     text-align: center;
 }
 
 main .contenido .equipo-desarrollo .equipo article {
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    vertical-align: top;
+    margin: 2em;
 }
 
 main .contenido .equipo-desarrollo .equipo p {
     width: 80%;
+}
+
+main .contenido .equipo-desarrollo .equipo img {
+    width: 16em;
+    height: 22em;
 }
 
 /*Formulario*/
@@ -534,13 +549,120 @@ footer .iconos-RRSS img:hover {
 }
 
 /*Responsive*/
+/*Uso 4 media queries para que la tabla de informacion de productos y
+el formulario de solicitud de informacion se lean bien en todos los dispositivos*/
 /*Media Queries*/
+@media (max-width: 1200px) {
+
+    /*Formulario*/
+    main .contenido .formulario fieldset {
+        width: 90%;
+        font-size: 1.2em;
+    }
+
+    main .contenido .formulario .contenido-form {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+
+    main .contenido .formulario form fieldset input {
+        width: 50%;
+        padding: 0.5em;
+        border-radius: 0.5em;
+        font-size: 0.9em;
+    }
+
+    /*Footer*/
+    footer .iconos-RRSS {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width: 920px) {
+
+    /*Productos y Servicios*/
+    main .contenido .productos-servicios .productos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2em;
+    }
+
+    main .contenido .productos-servicios .productos section {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .contenido .productos-servicios .productos section h3 {
+        font-size: 1.5em;
+    }
+
+    /*Tabla de informacion de productos*/
+    main .contenido .tabla-informacion {
+        font-size: 0.8em;
+    }
+
+    /*Herramientas de desarrollo*/
+    main .contenido .herramientas {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2em;
+    }
+
+    /*Equipo de desarrollo*/
+    main .contenido .equipo-desarrollo .equipo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+
+    main .contenido .equipo-desarrollo .equipo article {
+        width: 90%;
+        font-size: 1.2em;
+    }
+
+    /*Formulario*/
+    main .contenido .formulario {
+        font-size: 0.7em;
+    }
+
+}
+
+@media (max-width: 730px) {
+
+    /*Tabla de informacion de productos*/
+    main .contenido .tabla-informacion {
+        font-size: 0.7em;
+    }
+}
+
 @media (max-width: 620px) {
 
     /*Header*/
+    header {
+        height: 10em;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em;
+    }
+
     header .nombre-empresa {
         font-size: 0.8em;
         margin: 0.5em;
+        padding: 0.5em;
     }
 
     header .imagen-producto {
@@ -557,13 +679,31 @@ footer .iconos-RRSS img:hover {
     nav {
         margin: 0;
         padding: 0;
-        padding-top: 1em;
+        height: 6em;
     }
 
     nav ul {
-        padding: 0;
         margin: 0;
-        font-size: 0.8em;
+        font-size: 0.7em;
+    }
+
+    /*Main*/
+
+    /*Migas de pan*/
+    main .migas-de-pan {
+        margin-top: 2em;
+        font-size: 0.7em;
+    }
+
+
+    /*Tabla de informacion de productos*/
+    main .contenido .tabla-informacion {
+        font-size: 0.6em;
+    }
+
+    /*Formulario*/
+    main .contenido .formulario {
+        font-size: 0.6em;
     }
 
     /*Footer*/
@@ -573,7 +713,7 @@ footer .iconos-RRSS img:hover {
     }
 
     footer .opciones-footer ul {
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-weight: bold;
         display: flex;
         flex-direction: row;
