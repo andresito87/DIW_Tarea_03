@@ -15,10 +15,10 @@
 <body>
     <header>
         <div class="nombre-empresa">
-            <a href="#main">SoftNetwork Technology</a>
+            <a href="#main" tabindex="1">SoftNetwork Technology</a>
         </div>
         <div class="logo-empresa">
-            <a href="index.html">
+            <a href="index.html" tabindex="2">
                 <img src="./imagenes/logo.png" alt="Logotipo de la empresa" aria-labelledby="empresa-nombre" /></a>
         </div>
         <div class="submenu-header">
@@ -27,41 +27,42 @@
                 <img src="./imagenes/producto_destacado.jpg" alt="Producto del Mes" aria-labelledby="producto-mes">
             </div>
             <div class="botones">
-                <button class="boton-login" aria-label="Inicio de Sesión" tabindex="1">Inicio de Sesión</button>
-                <button class="boton-contacto" aria-label="Contacto" tabindex="2">Contacto</button>
+                <button class="boton-login" aria-label="Inicio de Sesión" tabindex="3">Inicio de Sesión</button>
+                <button class="boton-contacto" aria-label="Contacto" tabindex="4">Contacto</button>
             </div>
         </div>
     </header>
     <!--Navegación-->
     <nav class="navbar">
-        <ul role="menubar" class="menu-horizontal" aria-label="Menú de navegación">
-            <li role="menuitem" tabindex="3" accesskey="t" aria-label="Desarrollo Software">Desarrollo
+        <ul role="menubar" class="menu-horizontal" aria-label="Menú de navegación" title="Menu de navegación">
+            <li role="menuitem" tabindex="5" accesskey="t" aria-label="Desarrollo Software">Desarrollo
                 Sof<span>t</span>ware &#x25BE;
-                <ul role="menu" class="submenu">
-                    <li tabindex="4"><a href="https://www.ujaen.es/" target="_blank"
-                            aria-labelledby="Desarrollo Web"><span accesskey="W">W</span>eb</a>
+                <ul class="submenu">
+                    <li role="option"><a href="https://www.ujaen.es/" target="_blank" aria-labelledby="Desarrollo Web"
+                            tabindex="6"><span accesskey="W">W</span>eb</a>
                     </li>
-                    <li tabindex="5"><a href="https://www.juntadeandalucia.es/educacion/portals/web/ced" target="_blank"
-                            accesskey="P" aria-labelledby="ERP">ER<span>P</span></a></li>
-                    <li tabindex="6"><a href="./nosotros.html" target="_blank" accesskey="O"
-                            aria-labelledby="Sobre nosotros">S<span>o</span>bre
+                    <li role="option"><a href="https://www.juntadeandalucia.es/educacion/portals/web/ced"
+                            target="_blank" accesskey="P" aria-labelledby="ERP" tabindex="7">ER<span>P</span></a></li>
+                    <li role="option"><a href="./nosotros.html" target="_blank" accesskey="O"
+                            aria-labelledby="Sobre nosotros" tabindex="8">S<span>o</span>bre
                             nosotros</a></li>
                 </ul>
             </li>
-            <li role="none" tabindex="7"><a href="https://www.educacionyfp.gob.es/portada.html" target="_blank"
-                    accesskey="N" aria-labelledby="Consultoría">Co<span>n</span>sultoría</a></li>
-            <li role="none" tabindex="8"><a href="https://todofp.es/inicio.html" target="_blank" accesskey="I"
-                    aria-labelledby="Implantación y Administración de Redes"><span>I</span>mplantación y Administración
+            <li role="menuitem"><a href="https://www.educacionyfp.gob.es/portada.html" target="_blank" accesskey="N"
+                    aria-labelledby="Consultoría" tabindex="9">Co<span>n</span>sultoría</a></li>
+            <li role="menuitem"><a href="https://todofp.es/inicio.html" target="_blank" accesskey="I"
+                    aria-labelledby="Implantación y Administración de Redes" tabindex="10"><span>I</span>mplantación y
+                    Administración
                     de Redes</a></li>
-            <li role="none" tabindex="9"><a href="https://www.ujaen.es/" target="_blank" accesskey="Z"
-                    aria-labelledby="Zona privada"><span>Z</span>ona
+            <li role="menuitem"><a href="https://www.ujaen.es/" target="_blank" accesskey="Z"
+                    aria-labelledby="Zona privada" tabindex="11"><span>Z</span>ona
                     Privada</a></li>
         </ul>
     </nav>
     <main id="main">
         <section class=" migas-de-pan">
             <!-- Migas de pan -->
-            <p>Estás en: <a href="index.html" tabindex="10">Inicio</a> /Desarrollo Software / Sobre nosotros</p>
+            <p>Estás en: <a href="index.html" tabindex="12">Inicio</a> /Desarrollo Software / Sobre nosotros</p>
         </section>
         <h1>Sobre nosotros</h1>
         <section class="contenido">
@@ -127,8 +128,8 @@
                 <h2>Información de productos y servicios</h2>
                 <table>
                     <caption>Tabla de productos y servicios</caption>
-                    <details tabindex="11">
-                        <summary>Información de la tabla</summary>
+                    <details tabindex="13">
+                        <summary tabindex="-1">Información de la tabla</summary>
                         <p>La tabla muestra información sobre los productos y servicios que ofrece la empresa
                             SoftNetwork
                             Technology en relación con el número clientes</p>
@@ -155,7 +156,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td headers="clientes-nacionales" scope="row">Clientes nacionales</td>
+                            <td headers="clientes" scope="row">Clientes nacionales</td>
                             <td headers="clientes erp">300</td>
                             <td headers="clientes web">200</td>
                             <td headers="clientes redes">350</td>
@@ -163,7 +164,7 @@
                             <td headers="clientes consultoria">610</td>
                         </tr>
                         <tr>
-                            <td headers="clientes-internacionales" scope="row">Clientes internacionales</td>
+                            <td headers="clientes" scope="row">Clientes internacionales</td>
                             <td headers="clientes erp">560</td>
                             <td headers="clientes web">230</td>
                             <td headers="clientes redes">290</td>
@@ -173,7 +174,7 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td headers="totales" scope="row">Totales</td>
+                            <td headers="clientes" scope="row">Totales</td>
                             <td headers="clientes erp">860</td>
                             <td headers="clientes web">430</td>
                             <td headers="clientes redes">640</td>
@@ -196,7 +197,7 @@
                         <p>Autor: Jorge Luis Castro Medina</p>
                         <p>Fecha de publicación: 3-Dic-2023</p>
                         <a href="https://medium.com/@devjorgecastro/the-state-of-kotlin-multiplatform-webinar-2023-8877c80e4905"
-                            target="_blank" tabindex="12">Más información sobre Kotlin Multiplatform</a>
+                            target="_blank" tabindex="14">Más información sobre Kotlin Multiplatform</a>
                     </article>
                     <article class="herramienta2">
                         <h3>Best Tech Stack for Web App Development in 2023</h3>
@@ -208,7 +209,7 @@
                         <p>Autor: Vsevolod Ulyanovich</p>
                         <p>Fecha de publicación: 21-Sep-2023</p>
                         <a href="https://medium.com/fively/best-tech-stack-for-web-app-development-4e81beb4cc2d"
-                            target="_blank" tabindex="13">Más información sobre el mejor Stack Web</a>
+                            target="_blank" tabindex="15">Más información sobre el mejor Stack Web</a>
                     </article>
                 </div>
             </section>
@@ -247,7 +248,7 @@
                                 <label for="nombre-apellidos">Nombre y Apellidos:</label>
                                 <input id="nombre-apellidos" type="text" name="nombre-apellidos" minlength="3"
                                     maxlength="40" placeholder="Nombre y Apellidos" pattern="[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+"
-                                    title="Introduzca su nombre y apellidos con un máximo 40 caracteres" tabindex="14"
+                                    title="Introduzca su nombre y apellidos con un máximo 40 caracteres" tabindex="16"
                                     required>
                                 <!-- mensaje que se muestra para los campos obligatorios, cuando es invalido se muestra y cuando es válido se oculta -->
                                 <span class="mensaje"> Inválido</span>
@@ -256,12 +257,12 @@
                                 <label for="correo">Correo Electrónico:</label>
                                 <input id="correo" type="email" name="correo" placeholder="ejemplo@correo.com"
                                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                    title="Introduzca su correo electrónico" tabindex="15" required>
+                                    title="Introduzca su correo electrónico" tabindex="17" required>
                                 <span class="mensaje"> Inválido</span>
                                 <br>
                                 <br>
                                 <label for="select-producto">Elija un producto o servicio:</label>
-                                <select id="select-producto" acceskey="h" tabindex="16">
+                                <select id="select-producto" acceskey="h" tabindex="18">
                                     <optgroup label="Desarrollo">
                                         <option value="1">Software ERP</option>
                                         <option value="2" selected>Desarrollo Web</option>
@@ -276,12 +277,12 @@
                                 <br>
                                 <label for="fecha">Fecha de la cita:</label>
                                 <input id="fecha" type="date" name="fecha" placeholder="día de la cita"
-                                    title="Introduzca el día que desea la cita" tabindex="17" required>
+                                    title="Introduzca el día que desea la cita" tabindex="19" required>
                                 <span class="mensaje"> Inválido</span>
                                 <br>
                                 <br>
                                 <label for="select-turno">Turno:</label>
-                                <select id="select-turno" acceskey="h" tabindex="18">
+                                <select id="select-turno" acceskey="h" tabindex="20">
                                     <option value="1" selected>Mañana</option>
                                     <option value="2">Tarde</option>
                                 </select>
@@ -291,7 +292,7 @@
                             <fieldset class="informacion-adicional">
                                 <legend>Información adicional</legend>
                                 <label for="select-via-contacto">¿Como conoció nuestro producto?</label>
-                                <select id="select-via-contacto" acceskey="h" tabindex="19" multiple>
+                                <select id="select-via-contacto" acceskey="h" tabindex="21" multiple>
                                     <option value="1" selected>Aconsejado por terceros</option>
                                     <option value="2" selected>Redes Sociales</option>
                                     <option value="3" selected>Nuestra Web</option>
@@ -301,13 +302,13 @@
                                 <br>
                                 <label for="observaciones">Observaciones:</label>
                                 <textarea id="observaciones" name="observaciones" rows="4" cols="50"
-                                    placeholder="Observaciones" tabindex="20"></textarea>
+                                    placeholder="Observaciones" tabindex="22"></textarea>
                                 <br>
                             </fieldset>
                         </div>
                         <div class="botones">
-                            <button class="boton enviar" type="submit" tabindex="21">Enviar</button>
-                            <button class="boton inicializar" type="reset" tabindex="22">Inicializar</button>
+                            <button class="boton enviar" type="submit" tabindex="23">Enviar</button>
+                            <button class="boton inicializar" type="reset" tabindex="24">Inicializar</button>
                         </div>
                     </form>
                 </div>
