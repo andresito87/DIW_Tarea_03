@@ -15,10 +15,11 @@
 <body>
     <header>
         <div class="nombre-empresa">
-            <p>SoftNetwork Technology</p>
+            <a href="#main">SoftNetwork Technology</a>
         </div>
         <div class="logo-empresa">
-            <img src="./imagenes/logo.png" alt="Logotipo de la empresa" aria-labelledby="empresa-nombre">
+            <a href="index.html">
+                <img src="./imagenes/logo.png" alt="Logotipo de la empresa" aria-labelledby="empresa-nombre" /></a>
         </div>
         <div class="submenu-header">
             <div class="imagen-producto">
@@ -57,7 +58,7 @@
                     Privada</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="main">
         <section class=" migas-de-pan">
             <!-- Migas de pan -->
             <p>Estás en: <a href="index.html" tabindex="10">Inicio</a> /Desarrollo Software / Sobre nosotros</p>
@@ -154,7 +155,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td scope="row">Clientes nacionales</td>
+                            <td headers="clientes-nacionales" scope="row">Clientes nacionales</td>
                             <td headers="clientes erp">300</td>
                             <td headers="clientes web">200</td>
                             <td headers="clientes redes">350</td>
@@ -162,7 +163,7 @@
                             <td headers="clientes consultoria">610</td>
                         </tr>
                         <tr>
-                            <td scope="row">Clientes internacionales</td>
+                            <td headers="clientes-internacionales" scope="row">Clientes internacionales</td>
                             <td headers="clientes erp">560</td>
                             <td headers="clientes web">230</td>
                             <td headers="clientes redes">290</td>
@@ -172,7 +173,7 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td scope="row">Totales</td>
+                            <td headers="totales" scope="row">Totales</td>
                             <td headers="clientes erp">860</td>
                             <td headers="clientes web">430</td>
                             <td headers="clientes redes">640</td>
@@ -180,7 +181,6 @@
                             <td headers="clientes consultoria">900</td>
                         </tr>
                     </tfoot>
-
                 </table>
             </section>
             <section class="herramientas-desarrollo">
@@ -196,8 +196,7 @@
                         <p>Autor: Jorge Luis Castro Medina</p>
                         <p>Fecha de publicación: 3-Dic-2023</p>
                         <a href="https://medium.com/@devjorgecastro/the-state-of-kotlin-multiplatform-webinar-2023-8877c80e4905"
-                            target="_blank" tabindex="12">Más
-                            información</a>
+                            target="_blank" tabindex="12">Más información sobre Kotlin Multiplatform</a>
                     </article>
                     <article class="herramienta2">
                         <h3>Best Tech Stack for Web App Development in 2023</h3>
@@ -209,7 +208,7 @@
                         <p>Autor: Vsevolod Ulyanovich</p>
                         <p>Fecha de publicación: 21-Sep-2023</p>
                         <a href="https://medium.com/fively/best-tech-stack-for-web-app-development-4e81beb4cc2d"
-                            target="_blank" tabindex="13">Más información</a>
+                            target="_blank" tabindex="13">Más información sobre el mejor Stack Web</a>
                     </article>
                 </div>
             </section>
@@ -239,10 +238,8 @@
             </section>
             <section class="formulario"
                 title="Rellenar formulario para obtener más información sobre uno de nuestros productos">
-                <fieldset>
-                    <legend>
-                        <h2>Formulario de contacto</h2>
-                    </legend>
+                <h2>Formulario de contacto</h2>
+                <div>
                     <form action="/nosotros.html" autocomplete="on" validate>
                         <div class="contenido-form">
                             <fieldset class="informacion-obligatoria">
@@ -278,7 +275,7 @@
                                 <br>
                                 <br>
                                 <label for="fecha">Fecha de la cita:</label>
-                                <input type="date" id="fecha" name="fecha" placeholder="día de la cita"
+                                <input id="fecha" type="date" name="fecha" placeholder="día de la cita"
                                     title="Introduzca el día que desea la cita" tabindex="17" required>
                                 <span class="mensaje"> Inválido</span>
                                 <br>
@@ -306,7 +303,6 @@
                                 <textarea id="observaciones" name="observaciones" rows="4" cols="50"
                                     placeholder="Observaciones" tabindex="20"></textarea>
                                 <br>
-                                <br>
                             </fieldset>
                         </div>
                         <div class="botones">
@@ -314,21 +310,30 @@
                             <button class="boton inicializar" type="reset" tabindex="22">Inicializar</button>
                         </div>
                     </form>
-                </fieldset>
+                </div>
             </section>
         </section>
     </main>
     <footer>
         <!--Zona de cookies-->
-        <div class=" cookies">
-            <form id="cookie-formulario">
-                <h3>Configuración de Cookies</h3>
-                <label><input type="checkbox" name="cookies-obligatorias" value="cookies-obligatorias">Cookies
-                    Obligatorias</label>
-                <label><input type="checkbox" name="cookies-funcionalidad" value="cookies-funcionalidad">Cookies de
-                    Funcionalidad</label>
-                <label><input type="checkbox" name="cookies-publicitarias">Cookies Publicitarias</label>
-            </form>
+        <div class="cookies">
+            <h3>Configuración de Cookies</h3>
+            <div>
+                <input id="cookies-obligatorias" type="checkbox" name="cookies-obligatorias"
+                    value="cookies-obligatorias">
+                <label for="cookies-obligatorias">Cookies
+                    Obligatorias </label>
+            </div>
+            <div>
+                <input id="cookies-funcionalidad" type="checkbox" name="cookies-funcionalidad"
+                    value="cookies-funcionalidad">
+                <label for="cookies-funcionalidad">Cookies de Funcionalidad</label>
+            </div>
+            <div>
+                <input id="cookies-publicitarias" type="checkbox" name="cookies-publicitarias">
+                <label for="cookies-publicitarias">Cookies Publicitarias </label>
+            </div>
+
         </div>
         <!--Zona de información de la empresa-->
         <div class="opciones-footer">

@@ -4,11 +4,11 @@
 :root {
     /*Colores*/
     /*color con opacidad*/
-    --color-primario: rgba(75, 88, 66, 0.8);
-    --color-secundario: rgba(143, 179, 57, 1);
-    --color-terciario: rgba(183, 206, 99, 1);
-    --color-cuaternario: rgba(199, 213, 159, 1);
-    --color-quintenario: rgba(218, 221, 216, 1);
+    --color-primario: #1C1C1C;
+    --color-secundario: #8fb339;
+    --color-terciario: #b7ce63;
+    --color-cuaternario: #c7d59f;
+    --color-quintenario: #daddd8;
 
     /*Fuentes*/
     /*Open Sans 600*/
@@ -28,7 +28,6 @@ body {
     font-size: 1.1em;
 }
 
-
 /*Header*/
 header {
     font-family: "Open Sans", sans-serif;
@@ -41,11 +40,17 @@ header {
     padding: 2em;
 }
 
-header .nombre-empresa {
+header .nombre-empresa a {
     max-width: 20%;
     width: 200px;
     color: var(--color-secundario);
     font-size: 1.2em;
+    text-decoration: none;
+}
+
+header .nombre-empresa a:hover {
+    color: var(--color-terciario);
+    text-decoration: underline;
 }
 
 header .submenu-header {
@@ -199,14 +204,13 @@ main img {
 }
 
 main h2 {
-    color: var(--color-secundario);
+    color: var(--color-primario);
     font-size: 2em;
     font-weight: bold;
     text-align: center;
     margin: 0.5em;
     /*borde a las letras para que se lea mejor*/
     text-shadow: 1px 1px 1px var(--color-primario);
-
 }
 
 main .contenido {
@@ -227,10 +231,6 @@ main .contenido .productos-servicios {
     margin: 2em;
 }
 
-main .contenido .productos {
-    margin-top: 0 !important;
-}
-
 main .contenido .productos h3 {
     text-align: center;
 }
@@ -240,7 +240,7 @@ main .contenido .productos {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
     margin: 2em;
 }
 
@@ -269,7 +269,6 @@ main .contenido .tabla-informacion {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 2em;
     padding-bottom: 3em;
 }
 
@@ -289,12 +288,12 @@ main .contenido .tabla-informacion caption {
 
 main .contenido .tabla-informacion table thead {
     background-color: var(--color-secundario);
-    color: var(--color-quintenario);
+    color: var(--color-primario);
 }
 
 main .contenido .tabla-informacion details {
     background-color: var(--color-secundario);
-    color: var(--color-quintenario);
+    color: var(--color-primario);
     font-weight: bold;
     padding: 0.5em;
     border: 1px solid var(--color-primario);
@@ -315,9 +314,7 @@ main .contenido .tabla-informacion table tbody tr td {
 main .contenido .tabla-informacion table tfoot tr td {
     padding: 0.5em;
     border: 1px solid var(--color-primario);
-
     background-color: var(--color-terciario);
-
 }
 
 /*Herramientas de desarrollo*/
@@ -495,7 +492,7 @@ main .contenido .formulario .botones button:hover {
 /*Footer*/
 footer {
     font-family: "Open-Sans", sans-serif;
-    background-color: var(--color-primario);
+    background-color: var(--color-secundario);
     padding: 1rem;
     display: flex;
     flex-direction: row;
@@ -503,25 +500,37 @@ footer {
     align-items: center;
 }
 
-footer .cookies form {
+footer .cookies {
     margin: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-footer .cookies form label:hover {
+footer .cookies div {
+    display: flex;
+    flex-direction: row;
+    margin: 0.2em;
+}
+
+footer .cookies label:hover {
     outline: 2px solid var(--color-secundario);
 }
 
 footer .opciones-footer {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+
 footer .opciones-footer ul {
     list-style: square;
     font-size: 1.5em;
+}
+
+footer .opciones-footer ul li {
+    margin: 1em;
 }
 
 footer .opciones-footer ul li:hover {
@@ -555,6 +564,10 @@ el formulario de solicitud de informacion se lean bien en todos los dispositivos
 @media (max-width: 1200px) {
 
     /*Formulario*/
+    main .contenido .formulario h2 {
+        font-size: 2em;
+    }
+
     main .contenido .formulario fieldset {
         width: 90%;
         font-size: 1.2em;
@@ -574,6 +587,10 @@ el formulario de solicitud de informacion se lean bien en todos los dispositivos
         padding: 0.5em;
         border-radius: 0.5em;
         font-size: 0.9em;
+    }
+
+    main .contenido .formulario .botones button {
+        margin-right: 40px;
     }
 
     /*Footer*/
@@ -605,8 +622,12 @@ el formulario de solicitud de informacion se lean bien en todos los dispositivos
         font-size: 1.5em;
     }
 
+    main .contenido .producto2 {
+        margin-top: 2em;
+    }
+
     /*Tabla de informacion de productos*/
-    main .contenido .tabla-informacion {
+    main .contenido .tabla-informacion table {
         font-size: 0.8em;
     }
 
@@ -634,17 +655,16 @@ el formulario de solicitud de informacion se lean bien en todos los dispositivos
     }
 
     /*Formulario*/
-    main .contenido .formulario {
+    main .contenido .formulario div {
         font-size: 0.7em;
     }
-
 }
 
 @media (max-width: 730px) {
 
     /*Tabla de informacion de productos*/
-    main .contenido .tabla-informacion {
-        font-size: 0.7em;
+    main .contenido .tabla-informacion table {
+        font-size: 0.6em;
     }
 }
 
@@ -697,13 +717,8 @@ el formulario de solicitud de informacion se lean bien en todos los dispositivos
 
 
     /*Tabla de informacion de productos*/
-    main .contenido .tabla-informacion {
-        font-size: 0.6em;
-    }
-
-    /*Formulario*/
-    main .contenido .formulario {
-        font-size: 0.6em;
+    main .contenido .tabla-informacion table {
+        font-size: 0.45em;
     }
 
     /*Footer*/
