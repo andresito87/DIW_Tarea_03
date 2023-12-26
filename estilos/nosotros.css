@@ -132,7 +132,7 @@ header .botones button:hover {
 }
 
 .navbar .menu-horizontal .submenu span {
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--color-quintenario);
     font-weight: 800;
 }
